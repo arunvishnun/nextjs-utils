@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es5",                                // Compile to ES5 for broad browser compatibility
+    "lib": ["dom", "dom.iterable", "esnext"],       // Include type definitions for the DOM and latest ECMAScript features
+    "allowJs": true,                                // Allow JavaScript files to be compiled
+    "skipLibCheck": true,                           // Skip type checking of all declaration files (*.d.ts)
+    "esModuleInterop": true,                        // Enables ES6 module interoperability
+    "allowSyntheticDefaultImports": true,           // Allow default imports from modules with no default export
+    "strict": true,                                 // Enable all strict type-checking options
+    "forceConsistentCasingInFileNames": true,       // Disallow inconsistently-cased references to the same file
+    "module": "esnext",                             // Use ESNext module code generation
+    "moduleResolution": "node",                     // Use Node.js module resolution strategy
+    "resolveJsonModule": true,                      // Allow importing '.json' files
+    "isolatedModules": true,                        // Ensure each file can be safely transpiled without relying on other imports
+    "noEmit": true,                                 // Do not emit outputs (useful when using alongside a bundler like Webpack or SWC)
+    "jsx": "react",                                 // Support JSX in .tsx files
+    "baseUrl": "./",                                // Base directory to resolve non-relative module names
+    "paths": {                                      // Specify paths for module names
+      "*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*"],                          // Include all files in the src directory
+  "exclude": ["node_modules", "build", "dist"]      // Exclude directories from compilation
+}

@@ -2,17 +2,32 @@
   "name": "nextjs-utils",
   "version": "1.0.0",
   "description": "utilities for nextjs",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check-types": "tsc --noEmit",
+    "build": "swc src -d dist --source-maps",
+    "prebuild": "npm run check-types"
   },
+  "keywords": [
+    "typescript",
+    "swc",
+    "nextjs"
+  ],
   "author": "Arun Vishnunamboothiri",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^18.2.0",
-    "next": "^14.0.0 || ^13.0.0"
+    "next": "^14.0.0 || ^13.0.0",
+    "react": "^18.0.0"
   },
   "dependencies": {
     "@module-federation/nextjs-mf": "^8.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.73",
+    "@swc/cli": "^0.3.10",
+    "@swc/core": "^1.4.11",
+    "typescript": "^5.4.3"
   }
 }
